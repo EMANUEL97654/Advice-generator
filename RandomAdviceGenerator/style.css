@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: hsl(239, 49%, 27%);
+    color: hsl(13, 16%, 78%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+}
+
+.container{
+    position: relative;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    padding: 2rem;
+    background-color: hsl(209, 80%, 52%);
+}
+
+.titulo{
+    color:#0e070f;
+    text-align: center;
+    padding: 2rem 1rem 0.5rem 1rem;
+}
+
+.advice{
+    margin:0;
+    text-align: center;
+    padding: 2rem;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+    padding: 0;
+    margin: 0;
+    border: none;
+    padding: 2rem;
+    border-radius: 50%;
+}
+
+.btn:hover{
+    cursor:pointer;
+    background-color: #00cc3d;
+    box-shadow: -2px -2px 30px -2px red;
+    animation-name: giro;
+    animation-timing-function: cubic-bezier(1,1,1,.99);
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+@keyframes giro{
+    0%{transform: rotate(0deg);background-color: yellow;}
+    50%{transform: rotate(360deg);background-color:#00cc3d}
+    100%{background-color: yellow;}
+}
+
+
+/* Responsive */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        margin: auto;
+        padding: 0;
+    }
+
+    .advice{
+        font-size: 20px;
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+
+}
